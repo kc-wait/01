@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>开心回忆</title>
+    <link rel="stylesheet" href="./开心回忆.css">
+</head>
+<body>
+    <!-- 时间轴容器 -->
+    <div class="timeline">
+        <!-- 时间轴中线 -->
+        <div class="timeline-line"></div>
+
+        <!-- 时间轴项目 -->
+        <div class="timeline-item">
+            <div class="item-content left">
+                <h3>2025.2.21</h3>
+                <p>我们开始了这段关系</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="item-content right">
+                <h3>2025.2.27</h3>
+                <p>宝宝使用喷水笔攻击好闺蜜，好闺蜜却不曾发觉</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="item-content left">
+                <h3>2025.2.28</h3>
+                <p>今天打闺蜜不成，但是做了回狙击手，击中同桌</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="item-content right">
+                <h3>2025.3.2</h3>
+                <p>在迷你世界捣乱，嘿嘿（自己说的，与网站作者无关）</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="item-content left">
+                <h3>2025.3.3</h3>
+                <p>和闺蜜下课淋雨，非常开心</p>
+            </div>
+        </div>
+    </div>
+    <div class="nav-button">
+        <a href="./永远爱你.html" class="timeline-btn">
+            到最后
+        </a>
+    </div>
+    <script>
+        // 页面加载后触发动画
+        window.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.timeline-item');
+            
+            // 逐个激活动画
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('active');
+                }, index * 1000); // 每个节点间隔300ms
+            });
+        });
+        </script>
+</body>
+</html>
